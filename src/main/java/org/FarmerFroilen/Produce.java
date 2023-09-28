@@ -2,9 +2,10 @@ package org.FarmerFroilen;
 
 public interface Produce {
     /**
-     * @method - yeild();
+     * @method - yield();
      * @return -  returns an edible object
      *
+     * fixed the spelling of yield
      */
-     Edible yeild();
+     Edible yield();
 }

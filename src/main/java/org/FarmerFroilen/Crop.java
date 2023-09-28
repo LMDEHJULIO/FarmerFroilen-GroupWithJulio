@@ -4,14 +4,14 @@ package org.FarmerFroilen;
 public abstract class Crop implements Produce{
     private boolean hasBeenHarvested=false;
     private boolean hasBeenFertilized=false;
-
+    public Crop(){}
     /**
      * Crop will accept a parameter if it hasn't been fertilized
      * Crop when planted will always have hasBeenHarvested as false since it hasn't been harvested
      * @param hasBeenFertilized will start false if it doesn't receive any parameters, or it accepts if it has been fertilized
      */
 
-    public Crop(){}
+
     public Crop(boolean hasBeenFertilized){
         this.hasBeenFertilized=hasBeenFertilized;
     }

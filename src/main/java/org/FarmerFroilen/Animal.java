@@ -2,31 +2,88 @@ package org.FarmerFroilen;
 
 // Animal should implement NoiseMaker and Eater
 //
-public class Animal {
+public abstract class Animal implements Noisemaker, Eater{
 
-    /**
-     *
-     * @param sumToSay - string representing what will be appending and returned
-     * @return String - concatentation of sumToSay + "!"
-     */
 
     // Instance Variables
 
+    private String name;
+    private String noise;
+
     // Getters/Setters for ivars
 
-    // Nullary Constructor
-    // Constructor including param/ivars
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getNoise() {
+        return noise;
+    }
+
+    public void setNoise(String noise) {
+        this.noise = noise;
+    }
+
+
+
+    /**
+     * Nullary Animal Constructor
+     * @param null
+     * @return - Animal w default noise
+     */
+
+
+    public Animal(){
+        this.noise = "Baby animal noises";
+    }
+
+    /**
+     * Parameterized Animal Constructor
+     * @param String name
+     * @return - Animal w default name
+     */
+
+    public Animal(String name){
+        this.name = name;
+    }
+
 
     /**
      * toString
-     * @param
+     * @param null
      * @return - Stringified Animal Object
      */
 
-    //override toString
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "name='" + name + '\'' +
+                ", noise='" + noise + '\'' +
+                '}';
+    }
 
+    /**
+     * makeNoise
+     * @returns void - Print statement of noise
+     */
 
-//    public String saySum(String sumToSay){
-//        return sumToSay + "!";
-//    }
+    @Override
+    public void makeNoise() {
+        System.out.println(noise);
+    }
+
+    /**
+     * eat
+     * @param Edible - edible object (EarCorn, Tomato)
+     * @returns void - Print statement of eat
+     */
+
+    @Override
+    public void eat(Edible edible) {
+        System.out.println(name + " is eating " + edible);
+    }
 }
