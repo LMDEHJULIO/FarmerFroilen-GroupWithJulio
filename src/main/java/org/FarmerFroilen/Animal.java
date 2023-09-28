@@ -8,7 +8,11 @@ public abstract class Animal implements Noisemaker, Eater{
     // Instance Variables
 
     private String name;
+    //Maybe make noise final - animal noises only evolve once every several million years
     private String noise;
+
+    public Animal(String name) {
+    }
 
     // Getters/Setters for ivars
 
@@ -47,8 +51,9 @@ public abstract class Animal implements Noisemaker, Eater{
      * @return - Animal w default name
      */
 
-    public Animal(String name){
+    public Animal(String name, String noise){
         this.name = name;
+        this.noise = noise;
     }
 
 
