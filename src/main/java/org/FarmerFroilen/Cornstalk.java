@@ -13,7 +13,7 @@ public class Cornstalk extends Crop {
      * @return Returns an EarCorn if it hasn't been harvested and it is fertilized
      */
     @Override
-    public Edible yeild(){
+    public Edible yield(){
         if(getHasBeenFertilized()&&!getHasBeenHarvested()){
             System.out.println("This cornstalk has produced an EarCorn! ");
             return new EarCorn();
