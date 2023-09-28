@@ -2,5 +2,5 @@ package org.FarmerFroilen;
 
 public interface Botanist {
 
-    void plant();
+    void plant(Crop crop);
 }
