@@ -10,12 +10,20 @@ public class Animal {
      * @return String - concatentation of sumToSay + "!"
      */
 
-    // instance variables
+    // Instance Variables
 
-    // getters/setters for ivars
+    // Getters/Setters for ivars
 
     // Nullary Constructor
     // Constructor including param/ivars
+
+    /**
+     * toString
+     * @param
+     * @return - Stringified Animal Object
+     */
+
+    //override toString
 
 
 //    public String saySum(String sumToSay){
