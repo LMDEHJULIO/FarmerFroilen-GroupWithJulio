@@ -32,14 +32,11 @@ public abstract class Animal implements Noisemaker, Eater{
         this.noise = noise;
     }
 
-
-
     /**
      * Nullary Animal Constructor
      * @param null
      * @return - Animal w default noise
      */
-
 
     public Animal(){
         this.noise = "Baby animal noises";
@@ -78,7 +75,7 @@ public abstract class Animal implements Noisemaker, Eater{
 
     @Override
     public void makeNoise() {
-        System.out.println(noise);
+        System.out.println(this.noise);
     }
 
     /**

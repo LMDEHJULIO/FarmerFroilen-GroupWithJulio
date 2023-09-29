@@ -10,10 +10,6 @@ public class Horse extends Animal {
 
     //constructors - nullary and multiparam
 
-//    public Horse() {
-//        super("Neiigggghhhhhh");
-//    }
-
     public Horse(){
         this.setNoise("Neiigghhhhh");
     }

@@ -11,7 +11,7 @@ public class Chicken extends Animal implements Produce {
 
     // getters/setters
 
-    public boolean isHasBeenFertilized() {
+    public boolean getFertilizationStatus() {
         return hasBeenFertilized;
     }
 
