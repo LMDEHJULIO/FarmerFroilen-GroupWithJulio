@@ -23,6 +23,7 @@ public class EarCorn implements Edible{
      *
      * @return just says how delicious it is
      */
+    @Override
     public String toString(){
         return "I'm a delicious ear of corn!\n"+description;
     }

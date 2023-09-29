@@ -52,6 +52,7 @@ public class EdibleEgg implements Edible{
      *
      * @return just says how delicious it is
      */
+    @Override
     public String toString(){
         return "I'm a delicious egg!\n"+description;
     }
