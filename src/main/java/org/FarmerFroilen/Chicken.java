@@ -38,7 +38,7 @@ public class Chicken extends Animal implements Produce {
      */
 
     public Chicken(String name, boolean hasBeenFertilized) {
-        super(name);
+        super(name, "Buh-buh-ba-kaaaaaa");
         this.hasBeenFertilized = hasBeenFertilized;
     }
 
