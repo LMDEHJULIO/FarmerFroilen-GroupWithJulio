@@ -10,6 +10,8 @@ class ChickenTest {
 
     @BeforeEach
     void setUp() {
+//        Chicken nullaryChicken = new Chicken();
+//        Chicken paramChicken = new Chicken("Bob", false);
     }
 
     @AfterEach
@@ -26,6 +28,11 @@ class ChickenTest {
 
     @Test
     void yield() {
+        Chicken chicken1 = new Chicken("Bob", false);
+
+        Edible edibleEgg = chicken1.yield();
+
+        assertTrue(edibleEgg instanceof EdibleEgg);
     }
 
     @Test
