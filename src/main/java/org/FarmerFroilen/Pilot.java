@@ -7,4 +7,14 @@ public class Pilot extends Person{
     public void Flies(Aircraft aircraft){
         //some thing to do
     }
+
+    @Override
+    public void eat(Edible edible) {
+
+    }
+
+    @Override
+    public void makeNoise() {
+
+    }
 }

@@ -1,6 +1,6 @@
 package org.FarmerFroilen;
 
-public abstract class Person {
+public abstract class Person implements Noisemaker, Eater{
     //ivar of type string called name
     private String name;
 
