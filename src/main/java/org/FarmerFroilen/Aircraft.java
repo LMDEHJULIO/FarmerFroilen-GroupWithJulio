@@ -6,6 +6,7 @@ public abstract class Aircraft extends Vehicle {
         super(name);
     }
 
+
     public void fly(){
 
     }
