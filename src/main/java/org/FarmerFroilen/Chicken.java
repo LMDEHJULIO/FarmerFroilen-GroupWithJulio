@@ -1,6 +1,8 @@
 package org.FarmerFroilen;
 
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "animals")
 // extends animal
 public class Chicken extends Animal implements Produce {
 
