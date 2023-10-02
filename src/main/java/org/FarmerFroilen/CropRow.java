@@ -9,10 +9,15 @@ public class CropRow {
 
     /**
      * adds a crop at the end of the row
+     * checks if crop isn't null so it is a valid add
      * @param crop
      */
     public void addCrop(Crop crop){
-        crops.add(crop);
+        if(crop!=null) {
+            crops.add(crop);
+        }else{
+            System.out.println("There's no crop here!");
+        }
     }
 
     /**
