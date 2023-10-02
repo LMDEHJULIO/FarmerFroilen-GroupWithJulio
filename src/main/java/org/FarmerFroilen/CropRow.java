@@ -31,4 +31,10 @@ public class CropRow {
     public void removeCropAt(int x){
         crops.remove(x);
     }
+    public ArrayList<Crop> returnCrop(){
+        return crops;
+    }
+    public void setCropRow(ArrayList<Crop> x){
+        this.crops=x;
+    }
 }
