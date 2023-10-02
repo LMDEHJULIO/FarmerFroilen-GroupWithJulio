@@ -7,12 +7,12 @@ import java.util.Optional;
 
 public class FarmHouse extends FarmReceptacle {
 
-    private Utility.MaxableArrayList<Farmer> farmHands;
+    private Utility.MaxableArrayList<Person> farmHands;
     private String houseName;
 
      public FarmHouse(){
          super(5, Optional.of(Person.class));
-         this.farmHands = new Utility.MaxableArrayList<Farmer>(this.getMaxSize());
+         this.farmHands = new Utility.MaxableArrayList<Person>(this.getMaxSize());
          this.setStorageType(Optional.of(Person.class));
      }
 
@@ -25,19 +25,19 @@ public class FarmHouse extends FarmReceptacle {
          return houseName;
      }
 
-    public Utility.MaxableArrayList<Farmer> getFarmHands() {
+    public Utility.MaxableArrayList<Person> getFarmHands() {
         return farmHands;
     }
 
-    public void addFarmHand(Farmer farmer){
+    public void addFarmHand(Person farmer){
          farmHands.add(farmer);
     }
 
-    public void addFarmHands(Utility.MaxableArrayList<Farmer> farmHands) {
+    public void addFarmHands(Utility.MaxableArrayList<Person> farmHands) {
         farmHands.addAll(farmHands);
     }
 
-    public void removeFarmHand(Farmer farmer){
+    public void removeFarmHand(Person farmer){
          farmHands.remove(farmer);
     }
 

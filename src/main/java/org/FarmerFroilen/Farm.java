@@ -2,6 +2,7 @@ package org.FarmerFroilen;
 
 import jdk.jshell.execution.Util;
 
+import java.net.URI;
 import java.util.List;
 
 public class Farm {
@@ -11,6 +12,8 @@ public class Farm {
     private Field field;
     private Utility.MaxableArrayList farmVehicles = new Utility.MaxableArrayList<FarmVehicle>(2);
     private CropDuster cropDuster;
+    private Farmer farmOwner;
+    private Utility.MaxableArrayList farmHands = new Utility.MaxableArrayList<>(5);
 
     public Farm(){
         this.stables = new Utility.MaxableArrayList<Stable>(3);
@@ -95,6 +98,22 @@ public class Farm {
 
     public boolean removeFarmVehicle(FarmVehicle farmVehicle){
         return farmVehicles.remove(farmVehicle);
+    }
+
+    public Farmer getFarmOwner() {
+        return farmOwner;
+    }
+
+    public void setFarmOwner(Farmer farmOwner) {
+        this.farmOwner = farmOwner;
+    }
+
+//    public Utility.MaxableArrayList getFarmHands() {
+//        return farmHouse.farmHands;
+//    }
+
+    public void setFarmHands(Utility.MaxableArrayList farmHands) {
+        this.farmHands = farmHands;
     }
 
     @Override
