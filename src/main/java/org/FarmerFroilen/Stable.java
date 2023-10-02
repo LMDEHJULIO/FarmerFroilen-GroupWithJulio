@@ -41,4 +41,12 @@ public class Stable extends FarmReceptacle {
     public Utility.MaxableArrayList<Horse> getHorses(){
         return this.horses;
     }
+
+    @Override
+    public String toString() {
+        return "Stable{" +
+                "maxSize=" + getMaxSize() +
+                ", storageType=" + getStorageType() +
+                '}';
+    }
 }

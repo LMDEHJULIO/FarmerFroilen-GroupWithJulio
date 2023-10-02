@@ -17,6 +17,18 @@ public class Farm {
         return stables.add(stable);
     }
 
+    public Utility.MaxableArrayList<Stable> getStables(){
+        return this.stables;
+    }
+
+    public Stable getStableAtIndex(int i){
+        return this.stables.get(i);
+    }
+
+    public FarmHouse getFarmHouse(){
+        return this.farmHouse;
+    }
+
     public void addStableAtIndex(int index, Stable newStable){
         stables.add(index, newStable);
     }
@@ -31,5 +43,14 @@ public class Farm {
 
     public void setFarmHouse(FarmHouse newFarmhouse){
         farmHouse = newFarmhouse;
+    }
+
+    @Override
+    public String toString() {
+        return "Farm{" +
+                "stables=" + stables +
+                ", coops=" + coops +
+                ", farmHouse=" + farmHouse +
+                '}';
     }
 }

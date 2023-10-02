@@ -2,6 +2,8 @@ package org.FarmerFroilen;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class StableTest {
@@ -36,10 +38,27 @@ class StableTest {
     }
 
     @Test
-    void addHorses() {
+
+    void addHorses(){
+        Horse horse1 = new Horse();
+        Horse horse2 = new Horse();
+
+        stable1.addHorses(List.of(horse1, horse2));
+
+        assertTrue(stable1.getHorses().size() == 2);
+
     }
+
 
     @Test
     void removeHorse() {
+        Horse horse1 = new Horse();
+        stable1.addHorse(horse1);
+        assertTrue(stable1.getHorses().size() == 1);
+
+        stable1.removeHorse(horse1);
+
+        assertTrue(stable1.getHorses().size() == 0);
+
     }
 }
