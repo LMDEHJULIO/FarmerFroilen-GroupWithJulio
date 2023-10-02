@@ -27,4 +27,5 @@ public class EarCorn implements Edible{
     public String toString(){
         return "I'm a delicious ear of corn!\n"+description;
     }
+
 }
