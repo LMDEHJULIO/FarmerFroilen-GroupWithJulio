@@ -41,8 +41,7 @@ public abstract class Vehicle implements Noisemaker, Rideable {
         this.rideable = rideable;
     }
 
-    @Override
-    public boolean isRideable() {
+    public boolean isItRideable() {
         boolean canIRideIt = this.rideable;
         if (canIRideIt) {
             System.out.println("You can ride this vehicle");

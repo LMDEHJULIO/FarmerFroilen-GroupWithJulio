@@ -46,8 +46,7 @@ public class Tractor extends Vehicle implements FarmVehicle{
         this.noise = noise;
     }
 
-    @Override
-    public boolean isRideable() {
+    public boolean getIsRideable() {
         return rideable;
     }
 
