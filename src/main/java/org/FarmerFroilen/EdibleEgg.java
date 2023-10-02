@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 public class EdibleEgg implements Edible{
     private String description="I am packed with protein!";
+    
 
     // W3 Date classes -  https://www.w3schools.com/java/java_date.asp
 

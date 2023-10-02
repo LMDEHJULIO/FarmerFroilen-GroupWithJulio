@@ -9,10 +9,15 @@ public class CropRow {
 
     /**
      * adds a crop at the end of the row
+     * checks if crop isn't null so it is a valid add
      * @param crop
      */
     public void addCrop(Crop crop){
-        crops.add(crop);
+        if(crop!=null) {
+            crops.add(crop);
+        }else{
+            System.out.println("There's no crop here!");
+        }
     }
 
     /**
@@ -30,5 +35,11 @@ public class CropRow {
      */
     public void removeCropAt(int x){
         crops.remove(x);
+    }
+    public ArrayList<Crop> returnCrop(){
+        return crops;
+    }
+    public void setCropRow(ArrayList<Crop> x){
+        this.crops=x;
     }
 }
