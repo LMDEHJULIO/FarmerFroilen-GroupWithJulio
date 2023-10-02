@@ -51,7 +51,12 @@ public class CropRow {
      * @return returns the crop at x index
      */
     public Crop getCropAt(int x){
-        return crops.get(x);
+        if(x<crops.size()) {
+            return crops.get(x);
+        }else{
+            System.out.println("Invalid Index");
+            return null;
+        }
     }
 
     /**
@@ -59,7 +64,11 @@ public class CropRow {
      * @param x gives the index of the Crop wanted to be removed
      */
     public void removeCropAt(int x){
-        crops.remove(x);
+        if(x<crops.size()) {
+            crops.remove(x);
+        }else{
+            System.out.println("Invalid Index");
+        }
     }
     public ArrayList<Crop> returnCropRow(){
         return crops;
@@ -69,5 +78,12 @@ public class CropRow {
     }
     public int getRowNumber(){
         return rowNumber;
+    }
+    public String toString(){
+        String s = "";
+        for(Crop a : crops){
+            s+=a.toString()+"\n";
+        }
+        return s;
     }
 }
