@@ -3,7 +3,7 @@ package org.FarmerFroilen;
 /**
  * Just a produce that can be grouped with the Edible class
  */
-public class EarCorn extends Crop{
+public class EarCorn implements Edible{
     private String description="I'm yummy!";
 
     /**
@@ -28,8 +28,4 @@ public class EarCorn extends Crop{
         return "I'm a delicious ear of corn!\n"+description;
     }
 
-    @Override
-    public Edible yield() {
-        return null;
-    }
 }

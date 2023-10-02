@@ -17,7 +17,7 @@ public class Cornstalk extends Crop {
         if(getHasBeenFertilized()&&!getHasBeenHarvested()){
             System.out.println("This cornstalk has produced an EarCorn! ");
             setHasBeenHarvested(true);
-            return (Edible) new EarCorn();
+            return new EarCorn();
         } else if (!getHasBeenFertilized()) {
             System.out.println("This cornstalk hasn't been fertilized!");
             return null;
