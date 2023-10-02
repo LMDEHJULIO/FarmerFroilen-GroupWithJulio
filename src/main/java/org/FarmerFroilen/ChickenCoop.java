@@ -23,6 +23,10 @@ public class ChickenCoop extends FarmReceptacle {
         chicken.remove(removableChicken);
     }
 
+    public int getChickenCount(){
+        return this.chicken.size();
+    }
+
 
     public Utility.MaxableArrayList<Chicken> getChicken(){
         return chicken;
