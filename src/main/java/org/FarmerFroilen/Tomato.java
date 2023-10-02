@@ -1,6 +1,6 @@
 package org.FarmerFroilen;
 
-public class Tomato implements Edible {
+public class Tomato extends Crop {
     private String description="I'm juicy!";
 
     /**
@@ -23,5 +23,10 @@ public class Tomato implements Edible {
     @Override
     public String toString(){
         return "I'm a delicious tomato!\n"+description;
+    }
+
+    @Override
+    public Edible yield() {
+        return null;
     }
 }
