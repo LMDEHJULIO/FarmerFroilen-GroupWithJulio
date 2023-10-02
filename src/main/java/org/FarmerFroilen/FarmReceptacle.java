@@ -19,4 +19,8 @@ public abstract class FarmReceptacle<T> {
     public Optional<Class<T>> getStorageType() {
         return storageType;
     }
+
+    public void setStorageType(Optional<Class<T>> tClass){
+        storageType = tClass;
+    }
 }

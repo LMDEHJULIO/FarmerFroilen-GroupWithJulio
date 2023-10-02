@@ -12,6 +12,7 @@ public class FarmHouse extends FarmReceptacle {
      public FarmHouse(){
          super(5, Optional.of(Person.class));
          this.farmHands = new Utility.MaxableArrayList<Farmer>(this.getMaxSize());
+         this.setStorageType(Optional.of(Person.class));
      }
 
     public Utility.MaxableArrayList<Farmer> getFarmHands() {
