@@ -27,10 +27,20 @@ public abstract class Aircraft extends Vehicle {
     }
     public void fly(){
         takeOff();
-    if(isFlying == true){
+    if(isFlying){
         System.out.println("The aircraft is currently flying.");
      }
     }
 
-
+    @Override
+    public String toString() {
+        return "Aircraft{" +
+                "isFlying=" + isFlying +
+                ", flying=" + isFlying() +
+                ", operating=" + isOperating() +
+                ", name='" + getName() + '\'' +
+                ", noise='" + getNoise() + '\'' +
+                ", isRideable=" + getIsRideable() +
+                '}';
+    }
 }
