@@ -1,5 +1,7 @@
 package org.FarmerFroilen;
 
+import jdk.jshell.execution.Util;
+
 import java.util.List;
 
 public class Farm {
@@ -37,6 +39,10 @@ public class Farm {
         return this.farmHouse;
     }
 
+    public Utility.MaxableArrayList getChickenCoops(){
+        return this.coops;
+    }
+
     public void addStableAtIndex(int index, Stable newStable){
         stables.add(index, newStable);
     }
@@ -57,7 +63,39 @@ public class Farm {
         this.cropDuster = newDuster;
     }
 
+    public CropDuster getDuster(){
+        return this.cropDuster;
+    }
 
+    public int getChickenCount(){
+        int total = 0;
+
+        for(ChickenCoop coop : coops){
+            total += coop.getChickenCount();
+        }
+
+        return total;
+    }
+
+    public int getStableCount(){
+        return this.stables.size();
+    }
+
+    public boolean addFarmVehicle(FarmVehicle newFarmVehicle){
+        return this.farmVehicles.add(newFarmVehicle);
+    }
+
+    public void addFarmVehicleAt(int i, FarmVehicle newFarmVehicle){
+        this.farmVehicles.add(i, newFarmVehicle);
+    }
+
+    public Utility.MaxableArrayList getFarmVehicles() {
+        return farmVehicles;
+    }
+
+    public boolean removeFarmVehicle(FarmVehicle farmVehicle){
+        return farmVehicles.remove(farmVehicle);
+    }
 
     @Override
     public String toString() {

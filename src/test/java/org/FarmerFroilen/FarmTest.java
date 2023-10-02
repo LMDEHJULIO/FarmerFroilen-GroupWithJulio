@@ -59,5 +59,42 @@ class FarmTest {
         assertTrue(farm1.getFarmHouse() == newFarmhouse);
     }
 
+    @Test
+    void getChickenCount(){
+        farm1.getChickenCoops().add(new ChickenCoop());
+//        System.out.println(farm1.getChickenCoops().size());
+        ChickenCoop coop1 = (ChickenCoop) farm1.getChickenCoops().get(0);
+        coop1.addChicken(new Chicken());
+        assertTrue(farm1.getChickenCount() == 1);
+    }
+
+    @Test
+    void buyDuster(){
+        farm1.buyCropDuster(new CropDuster("Zoom-o-matic", "ring-a-ding-ding", true));
+
+        assertTrue(farm1.getDuster() instanceof CropDuster);
+    }
+
+    @Test
+    void addFarmVehicles(){
+        FarmVehicle farmVehicle1 = new Tractor("Tracto", "Brp-brp-brp-brp-brp", true);
+        farm1.addFarmVehicle(farmVehicle1);
+
+        System.out.println(farm1.getFarmVehicles().size());
+        assertTrue(farm1.getFarmVehicles().size() == 1);
+
+        farm1.removeFarmVehicle(farmVehicle1);
+
+        assertTrue(farm1.getFarmVehicles().size() == 0);
+    }
+
+    @Test
+    void getStableCount(){
+        System.out.println(farm1.getStableCount());
+        farm1.addStable(new Stable());
+        System.out.println(farm1.getStableCount());
+
+    }
+
 
 }
