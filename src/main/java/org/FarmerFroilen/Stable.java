@@ -38,4 +38,15 @@ public class Stable extends FarmReceptacle {
         return horses.remove(removedHorse);
     }
 
+    public Utility.MaxableArrayList<Horse> getHorses(){
+        return this.horses;
+    }
+
+    @Override
+    public String toString() {
+        return "Stable{" +
+                "maxSize=" + getMaxSize() +
+                ", storageType=" + getStorageType() +
+                '}';
+    }
 }

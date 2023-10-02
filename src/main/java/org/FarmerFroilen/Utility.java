@@ -7,7 +7,7 @@ public class Utility {
     public static class MaxableArrayList<T> extends ArrayList<T>{
 
         // Maxable ArrayList IS an ArrayList - it does not need a list property
-        //        private ArrayList<T> list;
+        // private ArrayList<T> list;
         private int maxSize;
 
         public MaxableArrayList(int maxSize){
@@ -26,7 +26,6 @@ public class Utility {
             }
             return false;
         }
-
 
         @Override
         public boolean add(T item){
