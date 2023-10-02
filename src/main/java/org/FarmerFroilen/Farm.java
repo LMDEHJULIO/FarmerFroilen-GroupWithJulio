@@ -53,6 +53,10 @@ public class Farm {
         farmHouse = newFarmhouse;
     }
 
+    public void buyCropDuster(CropDuster newDuster){
+        this.cropDuster = newDuster;
+    }
+
 
 
     @Override
