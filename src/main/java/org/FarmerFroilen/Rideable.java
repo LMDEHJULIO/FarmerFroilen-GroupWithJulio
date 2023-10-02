@@ -1,9 +1,10 @@
 package org.FarmerFroilen;
 
 public interface Rideable {
-    /**
-     *
-     * @return- boolean
-     */
-   boolean isRideable();
+
+   boolean isRideable = true;
+
+   private boolean getIsRideable(){
+       return isRideable;
+   };
 }

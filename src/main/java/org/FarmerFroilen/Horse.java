@@ -3,7 +3,7 @@ package org.FarmerFroilen;
 
 // extend animal / maybe implement Rideable
 
-public class Horse extends Animal {
+public class Horse extends Animal implements Rideable {
     // ivars
 
     // getters/setters

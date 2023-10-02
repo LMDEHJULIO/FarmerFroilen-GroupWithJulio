@@ -7,7 +7,7 @@ public class Chicken extends Animal implements Produce {
 
     // ivars like hasBeenFertilized
 
-    boolean hasBeenFertilized;
+    private boolean hasBeenFertilized;
 
     // getters/setters
 
@@ -58,5 +58,13 @@ public class Chicken extends Animal implements Produce {
         }
 
         return null;
+    }
+
+    @Override
+    public String toString() {
+        return "Chicken{" +
+                ", fertilizationStatus=" + getFertilizationStatus() +
+                ", yield=" + yield() +
+                '}';
     }
 }

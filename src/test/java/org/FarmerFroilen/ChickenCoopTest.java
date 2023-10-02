@@ -2,6 +2,8 @@ package org.FarmerFroilen;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.stream.Stream;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ChickenCoopTest {
@@ -10,6 +12,11 @@ class ChickenCoopTest {
     void  NullaryCoopConstructor() {
         ChickenCoop coop1 = new ChickenCoop();
 
-        System.out.println(coop1.chicken[0]);
+        Utility.MaxableArrayList<Chicken> chickenList = coop1.getChicken();
+
+
+        for(Chicken chicken : chickenList) {
+            System.out.println(chicken);
+        }
     }
 }

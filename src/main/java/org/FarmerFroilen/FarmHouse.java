@@ -1,13 +1,17 @@
 package org.FarmerFroilen;
 
+import jdk.jshell.execution.Util;
+
 import java.util.List;
+import java.util.Optional;
 
-public class FarmHouse {
+public class FarmHouse extends FarmReceptacle {
 
-    Farmer[] farmHands;
+    private Utility.MaxableArrayList<Farmer> farmHands;
 
      public FarmHouse(){
-         this.farmHands = new Farmer[5];
+         super(5, Optional.of(Person.class));
+         this.farmHands = new Utility.MaxableArrayList<Farmer>(this.maxSize);
      }
 
 }
