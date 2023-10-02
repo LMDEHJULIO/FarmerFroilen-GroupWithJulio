@@ -14,7 +14,8 @@ public class CropRow {
     /**
      * adds a crop at the end of the row
      * checks if crop isn't null so it is a valid add
-     * @param crop
+     * if the rowNumber is 0, only cornstalks are allowed, if its 1 only tomato plants are allowed
+     * @param crop takes a Crop object and adds it accordingly
      */
     public void addCrop(Crop crop){
         if(rowNumber==0) {
