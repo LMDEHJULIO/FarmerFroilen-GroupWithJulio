@@ -19,20 +19,23 @@ public class Stable extends FarmReceptacle {
 
     public Stable(){
         super(10, Optional.of(Horse.class));
-        this.horses = new Utility.MaxableArrayList<Horse>(15);
+        this.horses = new Utility.MaxableArrayList<Horse>(this.getMaxSize());
     }
 
     public boolean addHorse(Horse newHorse){
-
         return horses.add(newHorse);
-//        try{
-//            throwIfMaxedOut();
-//            horses.add(newHorse);
-//            return true;
-//        } catch (Exception e){
-//            e.printStackTrace();
-//            return false;
-//        }
+    }
+
+    public void addHorseAtIndex(int index, Horse horse){
+        horses.add(index, horse);
+    }
+
+    public boolean addHorses(List<Horse> addHorseList){
+        return horses.addAll(addHorseList);
+    }
+
+    public boolean removeHorse(Horse removedHorse){
+        return horses.remove(removedHorse);
     }
 
 }
