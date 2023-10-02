@@ -21,7 +21,7 @@ Iterate through the cropRow arrayList and check if each crop hasBeenFertilized, 
 
     @Override
     public void operate() {
-
+    setOperating(true);
     }
 
     @Override
