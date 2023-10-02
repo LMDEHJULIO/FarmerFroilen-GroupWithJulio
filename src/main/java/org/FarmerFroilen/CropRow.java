@@ -12,7 +12,11 @@ public class CropRow {
      * @param crop
      */
     public void addCrop(Crop crop){
-        crops.add(crop);
+        if(crop!=null) {
+            crops.add(crop);
+        }else{
+            System.out.println("There's no crop here!");
+        }
     }
 
     /**
