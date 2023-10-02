@@ -1,10 +1,12 @@
 package org.FarmerFroilen;
 
 public abstract class Aircraft extends Vehicle {
-    // added this bc of a test error in FarmerTest
-    public Aircraft(String name) {
-        super(name);
+    public Aircraft(String name, String noise, boolean rideable) {
+        super(name, noise, rideable);
     }
+    // added this bc of a test error in FarmerTest
+
+
 
     public void fly(){
 
