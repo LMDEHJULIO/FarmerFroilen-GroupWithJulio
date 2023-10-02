@@ -19,7 +19,7 @@ public class CropRow {
      */
     public void addCrop(Crop crop){
         if(rowNumber==0) {
-            if (crop != null) {
+            if (crop instanceof Cornstalk) {
                 crops.add(crop);
             } else if(crop==null){
                 System.out.println("You're not adding anything!");
@@ -27,15 +27,8 @@ public class CropRow {
             else{
                 System.out.println("This crop is not a Corn Stalk");
             }
-        }else if (rowNumber==1){
-            if (crop != null) {
-                crops.add(crop);
-            } else if(crop==null){
-                System.out.println("You're not adding anything!");
-            }
-            else{
-                System.out.println("This crop is not a Tomato Plant");
-            }
+        }else if (rowNumber==1 && crop instanceof TomatoPlant){
+            crops.add(crop);
         }else{
             if (crop != null) {
                 crops.add(crop);
