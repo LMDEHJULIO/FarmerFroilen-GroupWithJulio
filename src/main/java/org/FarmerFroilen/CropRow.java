@@ -36,7 +36,7 @@ public class CropRow {
     public void removeCropAt(int x){
         crops.remove(x);
     }
-    public ArrayList<Crop> returnCrop(){
+    public ArrayList<Crop> returnCropRow(){
         return crops;
     }
     public void setCropRow(ArrayList<Crop> x){
