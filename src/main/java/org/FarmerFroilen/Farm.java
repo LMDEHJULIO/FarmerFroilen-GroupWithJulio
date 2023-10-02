@@ -6,15 +6,23 @@ public class Farm {
     private Utility.MaxableArrayList<Stable> stables;
     private Utility.MaxableArrayList<ChickenCoop> coops;
     private FarmHouse farmHouse;
+    private Field field;
+    private Utility.MaxableArrayList farmVehicles = new Utility.MaxableArrayList<FarmVehicle>(2);
+    private CropDuster cropDuster;
 
     public Farm(){
-        this.stables = new Utility.MaxableArrayList<>(3);
-        this.coops = new Utility.MaxableArrayList<>(4);
+        this.stables = new Utility.MaxableArrayList<Stable>(3);
+        this.coops = new Utility.MaxableArrayList<ChickenCoop>(4);
         this.farmHouse = new FarmHouse();
+        this.field = new Field();
     }
 
     public boolean addStable(Stable stable){
         return stables.add(stable);
+    }
+
+    public boolean addCoop(ChickenCoop coop){
+        return coops.add(coop);
     }
 
     public Utility.MaxableArrayList<Stable> getStables(){
@@ -44,6 +52,8 @@ public class Farm {
     public void setFarmHouse(FarmHouse newFarmhouse){
         farmHouse = newFarmhouse;
     }
+
+
 
     @Override
     public String toString() {
