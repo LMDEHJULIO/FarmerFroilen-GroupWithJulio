@@ -47,7 +47,7 @@ public class Tractor extends Vehicle implements FarmVehicle{
     }
 
     @Override
-    public boolean isRideable() {
+    public boolean getIsRideable() {
         return rideable;
     }
 
