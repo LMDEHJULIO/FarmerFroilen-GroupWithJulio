@@ -69,9 +69,11 @@ public class Tractor extends Vehicle implements FarmVehicle{
         //initializes hasBeenHarvested to false
         boolean hasBeenHarvested = crop.getHasBeenHarvested();
         //loop to check fertilized value of crop and if it has been harvested or not yet.
-        if ((crop.getHasBeenFertilized() == false) && hasBeenHarvested == true) {
+        if ((crop.getHasBeenFertilized() == false) && hasBeenHarvested == false) {
             //changes harvested value to true to signify that the crop was harvested
+            System.out.println("You have successfully harvested your crop!");
             hasBeenHarvested = true;
+            crop.setHasBeenHarvested(hasBeenHarvested);
         } else {
             System.out.println("This crop cannot be harvested");
         }

@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
 //        Crop tomato = new TomatoPlant();
 //        Crop tomato2 = new TomatoPlant();
-//        Crop corn = new Cornstalk();
+        Crop corn = new Cornstalk();
 //        Crop corn2 = new Cornstalk();
 //        CropRow cropRow = new CropRow();
 //        cropRow.addCrop(tomato);
@@ -17,6 +17,12 @@ public class Main {
 //        cropDuster.fly();
 //        cropDuster.fertilize(cropRow);
 //        System.out.println(cropRow.getCropAt(3));
+//        Tractor bgTractor = new Tractor("Big Green Tractor", "Choo choo", true);
+//        //checks output to confirm successful harvest
+//        bgTractor.harvest(corn);
+//        //checks output to confirm you cannot harvest this crop again
+//        bgTractor.harvest(corn);
+
 
         Farm froilandsFarm = new Farm();
 
