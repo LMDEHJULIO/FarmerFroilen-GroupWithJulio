@@ -8,12 +8,21 @@ public abstract class Vehicle implements Noisemaker, Rideable {
     private String noise;
 
     private boolean rideable;
+    private boolean isOperating = false;
 
     //default constructor for name/noise string
     public Vehicle(String name, String noise, boolean rideable) {
         this.name = name;
         this.noise = noise;
         this.rideable = rideable;
+    }
+
+    public boolean isOperating() {
+        return isOperating;
+    }
+
+    public void setOperating(boolean operating) {
+        isOperating = operating;
     }
 
     //getter method for name of vehicle
