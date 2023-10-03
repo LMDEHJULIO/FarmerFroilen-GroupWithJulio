@@ -1,10 +1,13 @@
-package org.FarmerFroilen;
+package org.FarmerFroilen.Vehicle;
+import lombok.Data;
 import org.FarmerFroilen.Crop.Crop;
 import org.FarmerFroilen.Crop.CropRow;
 import org.FarmerFroilen.Interface.FarmVehicle;
-import org.FarmerFroilen.Vehicle.Aircraft;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.*;
+@Document(collection = "cropduster")
+@Data
+
 public class CropDuster extends Aircraft implements FarmVehicle {
     public CropDuster(String name, String noise, boolean rideable) {
         super(name, noise, rideable);
@@ -12,9 +15,9 @@ public class CropDuster extends Aircraft implements FarmVehicle {
     // test error
 
 
-/*
-Iterate through the cropRow arrayList and check if each crop hasBeenFertilized, if not then fertilize the crop.
- */  public void fertilize(CropRow cropRow) {
+    /*
+    Iterate through the cropRow arrayList and check if each crop hasBeenFertilized, if not then fertilize the crop.
+     */  public void fertilize(CropRow cropRow) {
 
        for(int i = 0; i < cropRow.returnCropRow().size(); i++){
             Crop currentCrop = cropRow.getCropAt(i);
@@ -26,20 +29,17 @@ Iterate through the cropRow arrayList and check if each crop hasBeenFertilized, 
 
     @Override
     public void operate() {
-
+    setOperating(true);
     }
 
     @Override
     public String toString() {
         return "CropDuster{" +
-                "name='" + getName() + '\'' +
+                "flying=" + isFlying() +
+                ", operating=" + isOperating() +
+                ", name='" + getName() + '\'' +
                 ", noise='" + getNoise() + '\'' +
-                ", rideable=" + isRideable() +
+                ", isRideable=" + getIsRideable() +
                 '}';
-    }
-
-    @Override
-    public void makeNoise() {
-
     }
 }
