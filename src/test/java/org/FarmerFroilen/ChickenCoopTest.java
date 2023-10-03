@@ -1,11 +1,11 @@
 package org.FarmerFroilen;
 
+import org.FarmerFroilen.Animal.Chicken;
+import org.FarmerFroilen.Receptacle.ChickenCoop;
+import org.FarmerFroilen.Utility.Utility;
 import org.junit.jupiter.api.Test;
 
-import java.sql.SQLOutput;
-import java.util.Collection;
 import java.util.List;
-import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -23,16 +23,8 @@ class ChickenCoopTest {
         assertTrue(coop1.getMaxSize() == 15);
         assertTrue(coop1.getMaxSize() == coop1.getChicken().getMaxSize());
 
-
-////        System.out.println(chicken1);
-//        System.out.println(coop1.getChicken().size());
-//
-//        for(Chicken chicken : chickenList) {
-//            System.out.println(chicken.toString());
-//            System.out.println(coop1);
-//        }
     }
-//
+
     @Test
     void add(){
         ChickenCoop coop1 = new ChickenCoop();

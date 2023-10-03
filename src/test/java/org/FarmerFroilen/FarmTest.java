@@ -1,5 +1,13 @@
 package org.FarmerFroilen;
 
+import org.FarmerFroilen.Animal.Chicken;
+import org.FarmerFroilen.Interface.FarmVehicle;
+import org.FarmerFroilen.Receptacle.ChickenCoop;
+import org.FarmerFroilen.Receptacle.Farm;
+import org.FarmerFroilen.Receptacle.FarmHouse;
+import org.FarmerFroilen.Receptacle.Stable;
+import org.FarmerFroilen.Vehicle.CropDuster;
+import org.FarmerFroilen.Vehicle.Tractor;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

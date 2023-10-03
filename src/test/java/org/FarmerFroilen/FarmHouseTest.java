@@ -1,9 +1,10 @@
 package org.FarmerFroilen;
 
+import org.FarmerFroilen.Person.Farmer;
+import org.FarmerFroilen.Person.Person;
+import org.FarmerFroilen.Receptacle.FarmHouse;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,65 +1,66 @@
 package org.FarmerFroilen;
+import org.FarmerFroilen.Animal.Chicken;
+import org.FarmerFroilen.Animal.Horse;
+import org.FarmerFroilen.Crop.*;
+import org.FarmerFroilen.Person.Farmer;
+import org.FarmerFroilen.Person.Person;
+import org.FarmerFroilen.Person.Pilot;
+import org.FarmerFroilen.Receptacle.ChickenCoop;
+import org.FarmerFroilen.Receptacle.Farm;
+import org.FarmerFroilen.Receptacle.FarmHouse;
+import org.FarmerFroilen.Receptacle.Stable;
+import org.FarmerFroilen.Utility.Utility;
+import org.FarmerFroilen.Vehicle.CropDuster;
+
 import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
-//        Crop tomato = new TomatoPlant();
-//        Crop tomato2 = new TomatoPlant();
-        Crop corn = new Cornstalk();
-//        Crop corn2 = new Cornstalk();
-//        CropRow cropRow = new CropRow();
-//        cropRow.addCrop(tomato);
-//        cropRow.addCrop(tomato2);
-//        cropRow.addCrop(corn2);
-//        cropRow.addCrop(corn);
-//        System.out.println("Wu tang forever");
-//        CropDuster cropDuster = new CropDuster("Plane","Nyoom",true);
-//        cropDuster.fly();
-//        cropDuster.fertilize(cropRow);
-//        System.out.println(cropRow.getCropAt(3));
-//        Tractor bgTractor = new Tractor("Big Green Tractor", "Choo choo", true);
-//        //checks output to confirm successful harvest
-//        bgTractor.harvest(corn);
-//        //checks output to confirm you cannot harvest this crop again
-//        bgTractor.harvest(corn);
-
-
         // New Farm
 
         Farm froilandsFarm = new Farm();
 
-        // new Farmer/Pilots
+        // new Farmer/Pilots - Froiland Froilanda
+
         Farmer froiland = new Farmer("Froiland");
         Pilot froilanda = new Pilot("Froilanda");
 
         // Get Farmhouse
 
-        System.out.println(froilandsFarm.getFarmHouse());
+        FarmHouse farmhouse = froilandsFarm.getFarmHouse();
 
-        // Add farmhands - have to edit the addAll functionality
-        froilandsFarm.getFarmHouse().addFarmHand(froiland);
-        froilandsFarm.getFarmHouse().addFarmHand(froilanda);
+        // Add farmhands
+
+        farmhouse.addFarmHands(List.of(froiland, froilanda));
+
 
         // Get farmhands
 
-        System.out.println(froilandsFarm.getFarmHouse().getFarmHands());
+        Utility.MaxableArrayList<Person> farmHands = froilandsFarm.getFarmHouse().getFarmHands();
+
 
         // Get Stables
-        System.out.println(froilandsFarm.getStables());
+
+        Utility.MaxableArrayList<Stable> stables = froilandsFarm.getStables();
 
         // Add multiple stables
+
         froilandsFarm.addStables(List.of(new Stable(), new Stable()));
 
+        // Get # of stables
 
-        // Get stables
-
-        System.out.println(froilandsFarm.getStables().size());
+        System.out.println("Number of Stables: " + froilandsFarm.getStables().size());
 
         // Add ChickenCoop
         froilandsFarm.addCoop(new ChickenCoop());
 
-        System.out.println(froilandsFarm.getChickenCoops().size());
+        // Get Coops
+
+        Utility.MaxableArrayList<ChickenCoop> chickenCoops = froilandsFarm.getChickenCoops();
+
+        // Get # of chicken coops
+        System.out.println("Number of coops " + chickenCoops.size());
 
 
         // Print field
@@ -74,36 +75,80 @@ public class Main {
         // Get Crop Rows
         Utility.MaxableArrayList froilandsCropRows = froilandsFarm.getField().getCropRows();
 
+        System.out.println("Crop Rows: " + froilandsCropRows);
+
         // Add Crop Rows
         froilandsCropRows.add(new CropRow());
 
         // Get last row and add tomato plant
+
         froilandsField.getLastRow().addCrop(new TomatoPlant());
 
-        // get & print last row
+        // Get & print last row
         System.out.println(froilandsField.getLastRow().toString());
 
-        // set row to be fertilized
+        // Set row to be fertilized
         froilandsField.getLastRow().getCropAt(0).setHasBeenFertilized(true);
 
-        froilandsField.getLastRow().getCropAt(0).yield();
+
+        // Create or "buy" new crop duster
 
         froilandsFarm.buyCropDuster(new CropDuster("CropStunna9000", "Sprissst-sprisst-fertile-fertile", true));
 
+
         CropRow lastRow = froilandsField.getLastRow();
 
+        // Add a cornstalk (currently unfertilized) to lastRow
         lastRow.addCrop(new Cornstalk());
+
+        // Fertilize last row
 
         froilandsFarm.getDuster().fertilize(lastRow);
 
+        // Yield that thang
+
         lastRow.getCropAt(1).yield();
 
+        // Get chicken coops
+
+        Utility.MaxableArrayList<ChickenCoop> coops = froilandsFarm.getChickenCoops();
+
+        // Get first coop
+        ChickenCoop firstCoop = coops.get(0);
+
+        System.out.println(coops.get(0));
+
+        // Add a chicken to that thang
+
+        firstCoop.addChicken(new Chicken());
+
+        // Print the number of chickens
+        System.out.println("Number of chickens: " + firstCoop.getChickenCount());
+
+        firstCoop.addChickens(List.of(new Chicken(), new Chicken()));
+
+        System.out.println("Number of chickens: " + firstCoop.getChickenCount());
 
 
+        // Get first stable
+        Stable firstStable = stables.get(0);
 
+        System.out.println(firstStable);
 
+        // Add a horsie to that thang
 
+        firstStable.addHorse(new Horse());
 
+        // Print the number of horsies
+        System.out.println("Number of horses: " + firstStable.getHorses().size());
+
+        // Add multiple Horsies
+
+        firstStable.addHorses(List.of(new Horse(), new Horse()));
+
+        // Print number of horses
+
+        System.out.println("Number of horses: " + firstStable.getHorses().size());
 
     }
 
