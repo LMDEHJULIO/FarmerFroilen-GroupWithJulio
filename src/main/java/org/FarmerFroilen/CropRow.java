@@ -19,8 +19,10 @@ public class CropRow {
      */
     public void addCrop(Crop crop){
         if(rowNumber==0 && crop instanceof Cornstalk) {
+            System.out.println("Cornstalk has been planted!");
             crops.add(crop);
         }else if (rowNumber==1 && crop instanceof TomatoPlant){
+            System.out.println("Tomato plant has been planted!");
             crops.add(crop);
         }else{
             if (crop != null) {

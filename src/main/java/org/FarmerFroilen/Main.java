@@ -86,7 +86,6 @@ public class Main {
         // set row to be fertilized
         froilandsField.getLastRow().getCropAt(0).setHasBeenFertilized(true);
 
-
         froilandsField.getLastRow().getCropAt(0).yield();
 
         froilandsFarm.buyCropDuster(new CropDuster("CropStunna9000", "Sprissst-sprisst-fertile-fertile", true));
