@@ -19,6 +19,8 @@ public class Horse extends Animal implements Rideable {
     }
 
 
+
+
     // @overide make noise / eat / maybe toString
 
 

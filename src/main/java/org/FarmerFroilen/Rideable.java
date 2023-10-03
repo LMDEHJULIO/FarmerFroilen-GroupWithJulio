@@ -7,4 +7,6 @@ public interface Rideable {
    private boolean getIsRideable(){
        return isRideable;
    };
+
+
 }

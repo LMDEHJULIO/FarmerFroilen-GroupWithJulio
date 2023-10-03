@@ -7,7 +7,9 @@ public class Farmer extends Person implements Botanist, Rider{
 
     @Override
     public void plant(Crop crop) {
-        // implement something
+      if(crop == null){
+        System.out.println("Cant plant");
+    }
         System.out.println("***Planting***");
     }
 
@@ -16,6 +18,9 @@ public class Farmer extends Person implements Botanist, Rider{
     @Override
     public void eat(Edible edible) {
         // implement Something
+        if(edible == null){
+            System.out.println("I can't eat air -pilot");
+        }
         System.out.println("***munching***");
     }
 

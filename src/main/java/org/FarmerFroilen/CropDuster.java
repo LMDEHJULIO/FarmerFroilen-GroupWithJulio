@@ -11,7 +11,7 @@ public class CropDuster extends Aircraft implements FarmVehicle {
 Iterate through the cropRow arrayList and check if each crop hasBeenFertilized, if not then fertilize the crop.
  */  public void fertilize(CropRow cropRow) {
 
-       for(int i = 0; i < cropRow.returnCrop().size(); i++){
+       for(int i = 0; i < cropRow.returnCropRow().size(); i++){
             Crop currentCrop = cropRow.getCropAt(i);
             if(!currentCrop.getHasBeenFertilized()){
                 currentCrop.setHasBeenFertilized(true);

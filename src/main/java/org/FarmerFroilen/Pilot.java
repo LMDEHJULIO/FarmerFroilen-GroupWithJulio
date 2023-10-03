@@ -13,7 +13,7 @@ public class Pilot extends Person{
     @Override
     public void eat(Edible edible) {
        if(edible == null){
-           System.out.println("Is not edible");
+           System.out.println("I can't eat air -pilot");
        }
 
         System.out.println("EATING...");
