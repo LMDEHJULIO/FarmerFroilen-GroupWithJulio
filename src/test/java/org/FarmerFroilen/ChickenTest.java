@@ -50,4 +50,6 @@ class ChickenTest {
         assertEquals("Bob", chicken1.getName());
         assertEquals(false, chicken1.getFertilizationStatus());
     }
+
+
 }

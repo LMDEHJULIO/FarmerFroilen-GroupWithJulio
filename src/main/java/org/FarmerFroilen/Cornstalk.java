@@ -33,7 +33,7 @@ public class Cornstalk extends Crop {
      */
     @Override
     public String toString(){
-        return "Am I fertilized? : " + getHasBeenFertilized()+ "\nHave I been harvested? : "+getHasBeenHarvested();
+        return "Am I fertilized? : " + getHasBeenFertilized()+ "\tHave I been harvested? : "+getHasBeenHarvested();
     }
 
 
