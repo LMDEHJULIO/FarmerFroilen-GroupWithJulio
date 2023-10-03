@@ -26,7 +26,7 @@ public class CropRow {
             if (crop != null) {
                 crops.add(crop);
             } else {
-                System.out.println("You're not adding anything!");
+                System.out.println("You're not adding anything or it is an invalid add!");
             }
         }
     }
