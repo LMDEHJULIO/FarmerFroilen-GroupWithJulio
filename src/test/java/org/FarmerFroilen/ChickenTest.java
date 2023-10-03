@@ -1,6 +1,8 @@
 package org.FarmerFroilen;
 
-import org.junit.Ignore;
+import org.FarmerFroilen.Animal.Chicken;
+import org.FarmerFroilen.Crop.EdibleEgg;
+import org.FarmerFroilen.Interface.Edible;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -50,4 +52,6 @@ class ChickenTest {
         assertEquals("Bob", chicken1.getName());
         assertEquals(false, chicken1.getFertilizationStatus());
     }
+
+
 }
