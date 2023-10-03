@@ -116,6 +116,14 @@ public class Farm {
         this.farmHands = farmHands;
     }
 
+    public void viewField(){
+        System.out.println(field);
+    }
+
+    public Field getField(){
+        return field;
+    }
+
     @Override
     public String toString() {
         return "Farm{" +

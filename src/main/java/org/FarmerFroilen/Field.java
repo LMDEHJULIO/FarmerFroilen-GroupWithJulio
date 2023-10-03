@@ -11,11 +11,25 @@ public class Field {
         this.cropRows.get(1).addCrop(new TomatoPlant());
     }
 
+    public Utility.MaxableArrayList<CropRow> getCropRows(){
+        return cropRows;
+    }
+
     public int getRowCount() {
         return this.cropRows.size();
     }
 
+    public CropRow getLastRow(){return this.cropRows.get(cropRows.size() - 1);}
+
     public void printRows(){
         System.out.println(cropRows);
+    }
+
+    @Override
+    public String toString() {
+        return "Field{" +
+                "cropRows=" + cropRows +
+                ", rowCount=" + getRowCount() +
+                '}';
     }
 }
