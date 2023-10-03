@@ -1,6 +1,10 @@
 package org.FarmerFroilen;
 
-import org.junit.jupiter.api.BeforeEach;
+import org.FarmerFroilen.Interface.Botanist;
+import org.FarmerFroilen.Interface.Eater;
+import org.FarmerFroilen.Interface.Rider;
+import org.FarmerFroilen.Person.Farmer;
+import org.FarmerFroilen.Person.Person;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
