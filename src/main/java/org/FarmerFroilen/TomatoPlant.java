@@ -16,7 +16,7 @@ public class TomatoPlant extends Crop {
     @Override
     public Edible yield() {
         if (getHasBeenFertilized() && !getHasBeenHarvested()) {
-            System.out.println("This tomato plant has produced an EarCorn! ");
+            System.out.println("This tomato plant has produced a tomato! ");
             setHasBeenHarvested(true);
             return new Tomato();
         } else if (!getHasBeenFertilized()) {
