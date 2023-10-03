@@ -50,6 +50,10 @@ public abstract class Vehicle implements Noisemaker, Rideable {
         this.rideable = rideable;
     }
 
+    /**
+     * gets rideable value 
+     * @return
+     */
     public boolean getIsRideable() {
         boolean canIRideIt = this.rideable;
         if (canIRideIt) {
@@ -60,7 +64,10 @@ public abstract class Vehicle implements Noisemaker, Rideable {
         return canIRideIt;
     }
 
-    //override Java Object method to return vehicle name and noise values
+    /**
+     * override tostring() method to print out descriptor of vehicle
+      * @return string value ivars for Vehicle class
+     */
     @Override
     public String toString() {
         return "Vehicle{" +

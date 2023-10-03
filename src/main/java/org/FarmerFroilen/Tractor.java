@@ -3,23 +3,24 @@ package org.FarmerFroilen;
 public class Tractor extends Vehicle implements FarmVehicle{
     /**
      * Tractor should have a name which is a String
+     * Tractor will have noise and rideable from vehicle class
      * Tractor will harvest a crop object
      * Tractor will implement FarmVehicle interface
-     *
-     * String name
-     * @method1- harvest()
-     * @param- crop
-     * @return- VOID
      */
 
-
-    //instance variable for type String called name
+    /**
+     * instance variable for type String called name, noise, and boolean rideable
+     */
     private String name;
     private String noise;
     private boolean rideable;
 
-    //default constructor for tractor
-
+    /**
+     * Default constructor for tractor
+     * @param name
+     * @param noise
+     * @param rideable
+     */
     public Tractor(String name, String noise, boolean rideable) {
         super(name, noise, rideable);
     }
@@ -36,27 +37,34 @@ public class Tractor extends Vehicle implements FarmVehicle{
         this.name = name;
     }
 
+    //getter for tractor noise
     @Override
     public String getNoise() {
         return noise;
     }
 
+    //setter for tractor noise
     @Override
     public void setNoise(String noise) {
         this.noise = noise;
     }
 
+    //getter for rideable boolean
     @Override
     public boolean getIsRideable() {
         return rideable;
     }
 
+    //setter for rideable boolean
     @Override
     public void setRideable(boolean rideable) {
         this.rideable = rideable;
     }
 
-    //harvest crop method
+    /**
+     * Harvest method sets hasBeenHarvested value to true/false
+     * @param crop
+     */
     public void harvest(Crop crop){
         /*
         Have to check if Crop is harvestable to be able to harvest
@@ -80,6 +88,10 @@ public class Tractor extends Vehicle implements FarmVehicle{
 
     }
 
+    /**
+     * override tostring() method to print out descriptor of vehicle
+     * @return string value ivars for Tractor class
+     */
     @Override
     public String toString(){
         return "Tractor{" +
@@ -95,6 +107,7 @@ public class Tractor extends Vehicle implements FarmVehicle{
         System.out.println("Tractors gonna tractor");
     }
 
+    //override for NoiseMaker makeNoise() method
     @Override
     public void makeNoise() {
         System.out.println(this.noise);
