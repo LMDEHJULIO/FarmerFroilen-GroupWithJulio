@@ -1,5 +1,7 @@
 package org.FarmerFroilen;
 
+import org.FarmerFroilen.Animal.Horse;
+import org.FarmerFroilen.Receptacle.Stable;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

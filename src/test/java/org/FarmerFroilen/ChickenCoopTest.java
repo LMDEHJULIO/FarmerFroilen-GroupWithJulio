@@ -1,11 +1,11 @@
 package org.FarmerFroilen;
 
+import org.FarmerFroilen.Animal.Chicken;
+import org.FarmerFroilen.Receptacle.ChickenCoop;
+import org.FarmerFroilen.Utility.Utility;
 import org.junit.jupiter.api.Test;
 
-import java.sql.SQLOutput;
-import java.util.Collection;
 import java.util.List;
-import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
