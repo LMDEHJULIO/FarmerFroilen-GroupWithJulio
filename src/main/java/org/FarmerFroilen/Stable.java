@@ -18,7 +18,7 @@ public class Stable extends FarmReceptacle {
 //    }
 
     public Stable(){
-        super(10, Optional.of(Horse.class));
+        super(10, Horse.class);
         this.horses = new Utility.MaxableArrayList<Horse>(this.getMaxSize());
     }
 

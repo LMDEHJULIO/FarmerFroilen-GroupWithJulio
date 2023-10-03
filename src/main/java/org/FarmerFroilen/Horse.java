@@ -1,7 +1,10 @@
 package org.FarmerFroilen;
 
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 // extend animal / maybe implement Rideable
+@Document(collection = "horse")
 
 public class Horse extends Animal implements Rideable {
     // ivars

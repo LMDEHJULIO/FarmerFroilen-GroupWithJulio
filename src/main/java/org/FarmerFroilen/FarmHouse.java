@@ -11,13 +11,13 @@ public class FarmHouse extends FarmReceptacle {
     private String houseName;
 
      public FarmHouse(){
-         super(5, Optional.of(Person.class));
+         super(5, Person.class);
          this.farmHands = new Utility.MaxableArrayList<Person>(this.getMaxSize());
-         this.setStorageType(Optional.of(Person.class));
+         this.setStorageType(Person.class);
      }
 
      public FarmHouse(String houseName){
-         super(5, Optional.of(Person.class));
+         super(5, Person.class);
          this.houseName = houseName;
      }
 
