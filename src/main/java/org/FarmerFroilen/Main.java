@@ -10,6 +10,7 @@ import org.FarmerFroilen.Receptacle.Farm;
 import org.FarmerFroilen.Receptacle.FarmHouse;
 import org.FarmerFroilen.Receptacle.Stable;
 import org.FarmerFroilen.Utility.Utility;
+import org.FarmerFroilen.Vehicle.Aircraft;
 import org.FarmerFroilen.Vehicle.CropDuster;
 
 import java.util.*;
@@ -25,7 +26,7 @@ public class Main {
         // new Farmer/Pilots - Froiland Froilanda
 
         Farmer froiland = new Farmer("Froiland");
-        Pilot froilanda = new Pilot("Froilanda");
+       Pilot froilanda = new Pilot("Froilanda");
 
         // Get Farmhouse
 
@@ -153,7 +154,9 @@ public class Main {
         // Print number of horses
 
         System.out.println("Number of horses: " + firstStable.getHorses().size());
-
+        Aircraft cropDuster = new CropDuster("Plane","Nyoom",true);
+        cropDuster.setPilot(froilanda);
+        cropDuster.fly();
     }
 
 }
