@@ -65,6 +65,8 @@ public class CropRow {
     public int getRowNumber(){
         return rowNumber;
     }
+
+    @Override
     public String toString(){
         String s = "";
         for(Crop a : crops){
