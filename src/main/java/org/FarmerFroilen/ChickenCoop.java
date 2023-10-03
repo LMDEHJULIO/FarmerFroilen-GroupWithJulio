@@ -7,7 +7,7 @@ public class ChickenCoop extends FarmReceptacle {
     private Utility.MaxableArrayList<Chicken> chicken;
 
     public ChickenCoop() {
-        super(15, Optional.of(Chicken.class));
+        super(15, Chicken.class);
         this.chicken = new Utility.MaxableArrayList<>(this.getMaxSize());
     }
 

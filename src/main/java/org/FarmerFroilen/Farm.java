@@ -1,11 +1,21 @@
 package org.FarmerFroilen;
 
 import jdk.jshell.execution.Util;
+import lombok.Data;
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.net.URI;
 import java.util.List;
 
+@Document(collection = "farm")
+@Data
+
 public class Farm {
+    @Id
+    private ObjectId id;
+
     private Utility.MaxableArrayList<Stable> stables;
     private Utility.MaxableArrayList<ChickenCoop> coops;
     private FarmHouse farmHouse;

@@ -1,6 +1,23 @@
 package org.FarmerFroilen;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "farmer")
+@Data
+//@AllArgsConstructor
+//@NoArgsConstructor
+
+
 public class Farmer extends Person implements Botanist, Rider{
+
+    @Id
+    private ObjectId id;
+
     public Farmer(String name) {
         super(name);
     }

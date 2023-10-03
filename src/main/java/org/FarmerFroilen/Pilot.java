@@ -1,7 +1,13 @@
 package org.FarmerFroilen;
 
-public class Pilot extends Person{
+import lombok.Data;
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "pilot")
+@Data
+public class Pilot extends Person{
     public Pilot(String name) {
         super(name);
     }
