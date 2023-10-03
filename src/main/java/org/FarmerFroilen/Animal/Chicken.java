@@ -10,15 +10,27 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Chicken extends Animal implements Produce {
 
 
-    // ivars like hasBeenFertilized
+    /* ***** IVARS ***** */
 
+    // hasBeenFertilized - boolean as to whether chicken has/has not been fertilized
     private boolean hasBeenFertilized;
 
-    // getters/setters
+    /* ***** GETTERS | SETTERS ***** */
+
+    /**
+     * getFertilizationStatus
+     * @return boolean - return hasBeenFertilized value of true or false
+     */
 
     public boolean getFertilizationStatus() {
         return hasBeenFertilized;
     }
+
+    /**
+     * setHasBeenFertilized
+     * @param hasBeenFertilized boolean representing new fertilization state
+     * @return void
+     */
 
     public void setHasBeenFertilized(boolean hasBeenFertilized) {
         this.hasBeenFertilized = hasBeenFertilized;
@@ -48,7 +60,8 @@ public class Chicken extends Animal implements Produce {
     }
 
 
-    // @overide yield / make noise / eat / maybe toString
+
+    /* ***** OVERRIDES ***** */
 
     /**
      * yield
@@ -65,11 +78,15 @@ public class Chicken extends Animal implements Produce {
         return null;
     }
 
+    /**
+     * Override - toString
+     * @return String - stringified version of Chicken
+     */
+
     @Override
     public String toString() {
         return "Chicken{" +
                 ", fertilizationStatus=" + getFertilizationStatus() +
-//                ", yield=" + yield() +
                 '}';
     }
 }

@@ -3,6 +3,8 @@ package org.FarmerFroilen.Receptacle;
 import org.FarmerFroilen.Person.Person;
 import org.FarmerFroilen.Utility.Utility;
 
+import java.util.List;
+
 public class FarmHouse extends FarmReceptacle {
 
     private Utility.MaxableArrayList<Person> farmHands;
@@ -31,8 +33,12 @@ public class FarmHouse extends FarmReceptacle {
          farmHands.add(farmer);
     }
 
-    public void addFarmHands(Utility.MaxableArrayList<Person> farmHands) {
-        farmHands.addAll(farmHands);
+//    public void addFarmHands(Utility.MaxableArrayList<Person> farmHands) {
+//        farmHands.addAll(farmHands);
+//    }
+
+    public void addFarmHands(List<Person> farmHands) {
+        this.farmHands.addAll(farmHands);
     }
 
     public void removeFarmHand(Person farmer){

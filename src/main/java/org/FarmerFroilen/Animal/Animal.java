@@ -4,12 +4,10 @@ import org.FarmerFroilen.Interface.Eater;
 import org.FarmerFroilen.Interface.Edible;
 import org.FarmerFroilen.Interface.Noisemaker;
 
-// Animal should implement NoiseMaker and Eater
-//
 public abstract class Animal implements Noisemaker, Eater {
 
 
-    // Instance Variables
+    /*INSTANCE VARIABLES*/
 
     private String name;
     //Maybe make noise final - animal noises only evolve once every several million years
@@ -18,19 +16,39 @@ public abstract class Animal implements Noisemaker, Eater {
     public Animal(String name) {
     }
 
-    // Getters/Setters for ivars
+   /*GETTERS | SETTERS*/
+
+    /**
+     * getName - getter for name of Animal
+     * @return String name of Animal
+     */
 
     public String getName() {
         return name;
     }
 
+    /**
+     * setName - setter for name of Animal
+     * @return void
+     */
+
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * getNoise - getter for noise of Animal
+     * @return String noise of Animal
+     */
+
     public String getNoise() {
         return noise;
     }
+
+    /**
+     * setNoise - setter for noise of Animal
+     * @return void
+     */
 
     public void setNoise(String noise) {
         this.noise = noise;
@@ -56,7 +74,6 @@ public abstract class Animal implements Noisemaker, Eater {
         this.name = name;
         this.noise = noise;
     }
-
 
     /**
      * toString

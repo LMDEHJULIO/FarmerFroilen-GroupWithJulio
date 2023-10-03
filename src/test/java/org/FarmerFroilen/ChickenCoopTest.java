@@ -23,16 +23,8 @@ class ChickenCoopTest {
         assertTrue(coop1.getMaxSize() == 15);
         assertTrue(coop1.getMaxSize() == coop1.getChicken().getMaxSize());
 
-
-////        System.out.println(chicken1);
-//        System.out.println(coop1.getChicken().size());
-//
-//        for(Chicken chicken : chickenList) {
-//            System.out.println(chicken.toString());
-//            System.out.println(coop1);
-//        }
     }
-//
+
     @Test
     void add(){
         ChickenCoop coop1 = new ChickenCoop();
