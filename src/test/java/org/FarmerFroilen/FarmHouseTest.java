@@ -5,12 +5,14 @@ import org.FarmerFroilen.Person.Person;
 import org.FarmerFroilen.Receptacle.FarmHouse;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class FarmHouseTest {
     static FarmHouse farmHouse1 = new FarmHouse();
+    static Farmer farmer1 = new Farmer("Froiland");
 
     @Test
     void getMaxSize() {
@@ -31,36 +33,25 @@ class FarmHouseTest {
     void addFarmHand() {
         farmHouse1.addFarmHand(new Farmer("John"));
 
-        assertTrue(farmHouse1.getFarmHands().size() == 1);
+        assertEquals(1, farmHouse1.getFarmHands().size());
     }
 
-//    @Test
-//    void addFarmHands() {
-//        Farmer dave = new Farmer("Dave");
-//        Farmer lilJim = new Farmer("Lil Jim");
-//
-//        Utility.MaxableArrayList<Farmer> farmRecruits = new Utility.MaxableArrayList<>(5);
-//
-//        farmRecruits.add(dave);
-//        farmRecruits.add(lilJim);
-//
-//        farmRecruits.forEach(hand -> System.out.println(hand.getName()));
-//
-//        farmHouse1.addFarmHands(farmRecruits);
-//
-//        System.out.println(farmHouse1.getFarmHands().size());
-//
-//        assertTrue(farmHouse1.getFarmHands().size() == farmRecruits.size());
-//    }
-//
-//    @Test
-//    void removeFarmHand() {
-//        farmHouse1.addFarmHand(new Farmer("Stewart"));
-//
-//        farmHouse1.remove("Stewart");
-//    }
-//
-//    @Test
-//    void testToString() {
-//    }
+    @Test
+
+    void addFarmHands(){
+        farmHouse1.addFarmHands(List.of(new Farmer("Jim"), new Farmer("Jon")));
+
+        assertEquals(2, farmHouse1.getFarmHands().size());
+    }
+
+
+    @Test
+    void removeFarmHand() {
+        farmHouse1.addFarmHand(farmer1);
+        assertEquals(1, farmHouse1.getFarmHands().size());
+
+        farmHouse1.removeFarmHand(farmer1);
+
+        assertEquals(0, farmHouse1.getFarmHands().size());
+    }
 }

@@ -33,10 +33,6 @@ public class FarmHouse extends FarmReceptacle {
          farmHands.add(farmer);
     }
 
-//    public void addFarmHands(Utility.MaxableArrayList<Person> farmHands) {
-//        farmHands.addAll(farmHands);
-//    }
-
     public void addFarmHands(List<Person> farmHands) {
         this.farmHands.addAll(farmHands);
     }
