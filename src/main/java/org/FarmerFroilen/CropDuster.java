@@ -34,7 +34,7 @@ Iterate through the cropRow arrayList and check if each crop hasBeenFertilized, 
         return "CropDuster{" +
                 "name='" + getName() + '\'' +
                 ", noise='" + getNoise() + '\'' +
-                ", rideable=" + isRideable() +
+                ", rideable=" + getIsRideable() +
                 '}';
     }
 
